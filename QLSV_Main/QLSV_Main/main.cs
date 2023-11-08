@@ -9,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace QLSV_Main
 {
-    public partial class Giaodien : Form
+    public partial class main : Form
     {
         private string maSo = "";
         private string loaiTk = "";
         private string hoTen = "";
         private string email = "";
         private bool login;
-        public Giaodien()
+        public main()
         {
             InitializeComponent();
             timer1 = new Timer();
@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
             label2.Text = DateTime.Now.ToLongTimeString();
             label1.Text = DateTime.Now.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
         }
-        private void Giaodien_Load(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             var fn = new Login();
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
             email = fn.Email;
             label3.Text = loaiTk + ": " + hoTen;
             phanQuyen();
-            Giaodien f = new Giaodien();
+            main f = new main();
             AddFromLoad(f);
         }
 
@@ -83,33 +83,31 @@ namespace WindowsFormsApplication1
                 Application.Exit();
         }
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Dangxuat f = new Dangxuat();
+            var fn = new Login();
+            fn.ShowDialog();
+            loaiTk = fn.loaiTk;
+            hoTen = fn.hoTen;
+            maSo = fn.maSo;
+            email = fn.Email;
+            label3.Text = loaiTk + ": " + hoTen;
+            phanQuyen();
+            main f = new main();
             AddFromLoad(f);
         }
 
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void doiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nhanvien f = new Nhanvien();
-            AddFromLoad(f);
+            var fm = new DoiMatKhau(maSo, hoTen, loaiTk, email);
+            fm.ShowDialog();
         }
 
-        private void thiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thietbi f = new Thietbi();
-            AddFromLoad(f);
-        }
-
-        private void Giaodien_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             ExitApp();
-        }
-
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //var fm = new DoiMatKhau(maSo, hoTen, loaiTk, email);
-            //fm.ShowDialog();
         }
     }
 }

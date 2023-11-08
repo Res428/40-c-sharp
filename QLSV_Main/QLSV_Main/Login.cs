@@ -1,4 +1,3 @@
-﻿using QLSV_Main;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Security.Cryptography;
 
-namespace WindowsFormsApplication1
+namespace QLSV_Main
 {
     public partial class Login : Form
     {
         public bool login = false;
         public bool isThoat = false;
+        //MD5 mD5 = MD5.Create();
         public Login()
         {
             InitializeComponent();
@@ -28,36 +28,36 @@ namespace WindowsFormsApplication1
         public string hoTen = ""; // note
 
 
-
-        private void button2_Click(object sender, EventArgs e)
+        
+        private void btnHuy_Click(object sender, EventArgs e)
         {
             isThoat = true;
-            Application.Exit();
+            Application.Exit();   
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (cbxltk.SelectedIndex < 0)
+            if (cbxLoaiTK.SelectedIndex < 0)
             {
                 MessageBox.Show("Chưa chọn loại tài khoản đăng nhập");
-                cbxltk.Select();
+                cbxLoaiTK.Select();
                 return;
             }
-            if (string.IsNullOrEmpty(tk.Text))
+            if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 MessageBox.Show("Chưa nhập Email");
-                tk.Select();
+                txtEmail.Select();
                 return;
             }
-            if (string.IsNullOrEmpty(txtmk.Text))
+            if (string.IsNullOrEmpty(txtMatKhau.Text))
             {
                 MessageBox.Show("Chưa nhập Mật Khẩu");
-                txtmk.Select();
+                txtMatKhau.Select();
                 return;
             }
             else
             {
-                switch (cbxltk.Text)
+                switch (cbxLoaiTK.Text)
                 {
                     case "Giáo Viên":
                         loaiTk = "GV";
@@ -66,9 +66,9 @@ namespace WindowsFormsApplication1
                         loaiTk = "SV";
                         break;
                 }
-                Email = tk.Text;
-                mk = txtmk.Text;
-            }
+                Email = txtEmail.Text;
+                mk = txtMatKhau.Text;
+            }           
 
             List<CustomParameter> lst = new List<CustomParameter>()
             {
@@ -88,26 +88,30 @@ namespace WindowsFormsApplication1
 
             var rs = new Database().Login("dangNhap", lst);
 
-            if (rs != null)
+            if (rs != null)            
             {
                 login = true;
                 hoTen = rs.ItemArray[1].ToString();
                 maSo = rs.ItemArray[0].ToString();
                 MessageBox.Show("Đăng nhập thành công", "Thành công");
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Kiểm tra lại Email hoặc Mật khẩu", "Không thành công", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                tk.Select();
-            }
+                txtEmail.Select();
+            }            
         }
-
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
+        
+
+
+
+
     }
 }
-
-

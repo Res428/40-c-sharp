@@ -65,7 +65,6 @@
             this.ltk.Size = new System.Drawing.Size(133, 20);
             this.ltk.TabIndex = 1;
             this.ltk.Text = "Loại tài khoản:";
-            this.ltk.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 

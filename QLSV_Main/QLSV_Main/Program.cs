@@ -16,7 +16,7 @@ namespace QLSV_Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new main());
         }
     }
 }
