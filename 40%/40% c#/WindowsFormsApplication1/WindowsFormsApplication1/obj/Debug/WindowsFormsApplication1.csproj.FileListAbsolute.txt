@@ -31,3 +31,7 @@ D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsForms
 D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
 D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\STUDY\winform 40%\40-c-sharp\40%\40% c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.welcome.resources

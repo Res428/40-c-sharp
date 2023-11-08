@@ -38,12 +38,12 @@
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngKýMượnThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.đăngKýMượnThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
             // 
             this.nhânViênToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
             this.nhânViênToolStripMenuItem.Text = "Nhân viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
@@ -120,7 +120,7 @@
             // 
             this.thiếtBịToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.thiếtBịToolStripMenuItem.Name = "thiếtBịToolStripMenuItem";
-            this.thiếtBịToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.thiếtBịToolStripMenuItem.Size = new System.Drawing.Size(197, 30);
             this.thiếtBịToolStripMenuItem.Text = "Thiết bị";
             this.thiếtBịToolStripMenuItem.Click += new System.EventHandler(this.thiếtBịToolStripMenuItem_Click);
             // 
@@ -132,10 +132,18 @@
             this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(114, 31);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
+            // đăngKýMượnThiếtBịToolStripMenuItem
+            // 
+            this.đăngKýMượnThiếtBịToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.đăngKýMượnThiếtBịToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.đăngKýMượnThiếtBịToolStripMenuItem.Name = "đăngKýMượnThiếtBịToolStripMenuItem";
+            this.đăngKýMượnThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(257, 31);
+            this.đăngKýMượnThiếtBịToolStripMenuItem.Text = "Đăng ký mượn thiết bị";
+            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(13, 39);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1199, 525);
             this.panel1.TabIndex = 1;
@@ -171,14 +179,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
             // 
-            // đăngKýMượnThiếtBịToolStripMenuItem
-            // 
-            this.đăngKýMượnThiếtBịToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.đăngKýMượnThiếtBịToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.đăngKýMượnThiếtBịToolStripMenuItem.Name = "đăngKýMượnThiếtBịToolStripMenuItem";
-            this.đăngKýMượnThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(257, 31);
-            this.đăngKýMượnThiếtBịToolStripMenuItem.Text = "Đăng ký mượn thiết bị";
-            // 
             // Giaodien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,11 +190,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Giaodien";
-            this.Text = "Form2";
+            this.Text = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Giaodien_FormClosed);
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.Giaodien_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -107,7 +107,7 @@ namespace QLSV_Main
             {
                 conn.Open();
                 cmd = new SqlCommand(sql, conn);
-                cmd.CommandType = CommandType.StoredProcedure; // khai báo sử dụng Procedure SQL
+                //cmd.CommandType = CommandType.StoredProcedure; // khai báo sử dụng Procedure SQL
                 foreach (var p in lstPara)
                 {
                     cmd.Parameters.AddWithValue(p.key, p.value);

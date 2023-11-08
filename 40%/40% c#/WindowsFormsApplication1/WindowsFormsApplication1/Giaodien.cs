@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         private string loaiTk = "";
         private string hoten = "";
         private string email = "";
-        private bool login;
+        //private bool login;
         public Giaodien()
         {
             InitializeComponent();
@@ -35,15 +35,16 @@ namespace WindowsFormsApplication1
                 đăngKýMượnThiếtBịToolStripMenuItem.Visible = true;
             }
         }
-        private void Form2_Load(object sender, EventArgs e)
+        
+        private void Giaodien_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             var fn = new Login();
             fn.ShowDialog();
-            //mk = fn.m;
+            maso = fn.maso;
             loaiTk = fn.loaiTk;
-            hoten = fn.TaiKhoan;
-            //email = fn.Email;
+            hoten = fn.hoten;
+            email = fn.email;
             label3.Text = loaiTk + ": " + hoten;
             phanQuyen();
             Giaodien f = new Giaodien();
@@ -82,8 +83,8 @@ namespace WindowsFormsApplication1
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var fmk = new Đoimatkhau(maSo, hoTen, loaiTk, email);
-            fmk.ShowDialog();
+            //var fmk = new Đoimatkhau(maSo, hoTen, loaiTk, email);
+            //fmk.ShowDialog();
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,5 +109,6 @@ namespace WindowsFormsApplication1
         {
             ExitApp();
         }
+
     }
 }
