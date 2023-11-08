@@ -13,9 +13,9 @@ namespace WindowsFormsApplication1
 {
     public partial class Giaodien : Form
     {
-        private string maSo = "";
+        private string maso = "";
         private string loaiTk = "";
-        private string hoTen = "";
+        private string hoten = "";
         private string email = "";
         private bool login;
         public Giaodien()
@@ -40,11 +40,11 @@ namespace WindowsFormsApplication1
             timer1.Enabled = true;
             var fn = new Login();
             fn.ShowDialog();
-            maSo = fn.maSo;
+            //mk = fn.m;
             loaiTk = fn.loaiTk;
-            hoTen = fn.hoTen;
-            email = fn.Email;
-            label3.Text = loaiTk + ": " + hoTen;
+            hoten = fn.TaiKhoan;
+            //email = fn.Email;
+            label3.Text = loaiTk + ": " + hoten;
             phanQuyen();
             Giaodien f = new Giaodien();
             AddFromLoad(f);
